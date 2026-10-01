@@ -4,289 +4,333 @@ document.addEventListener(
 
 
 
-    /*
-    ===============================
-    Section Observer
+/*
+================================================
 
-    监听页面滚动位置，
-    自动切换导航状态
-    ===============================
-    */
+Scroll Spy
 
+根据滚动位置自动切换导航状态
 
-    const sections =
-        document.querySelectorAll(
-            ".content-section[id]"
-        );
+================================================
+*/
 
 
+const sections =
+document.querySelectorAll(
+    ".content-section[id]"
+);
 
-    const navLinks =
-        document.querySelectorAll(
-            ".nav-links a[href^='#']"
-        );
 
 
 
+const navLinks =
+document.querySelectorAll(
+    ".nav-links a[href^='#']"
+);
 
 
 
-    const observerOptions = {
 
 
-        root:null,
 
+const observerOptions = {
 
-        /*
-        上方20%区域和下方65%区域
-        用于判断当前章节
-        */
 
-
-        rootMargin:
-        "-20% 0px -65% 0px",
-
-
-        threshold:0
-
-
-    };
-
-
-
-
-
-
-
-    const observer =
-    new IntersectionObserver(
-
-        function(entries){
-
-
-
-            entries.forEach(
-
-                function(entry){
-
-
-
-                    if(entry.isIntersecting){
-
-
-
-                        const currentID =
-                        entry.target.getAttribute(
-                            "id"
-                        );
-
-
-
-
-
-                        navLinks.forEach(
-
-                            function(link){
-
-
-
-                                link.classList.remove(
-                                    "active"
-                                );
-
-
-
-
-                                if(
-                                    link.getAttribute(
-                                        "href"
-                                    )
-                                    ===
-                                    "#" + currentID
-                                ){
-
-
-                                    link.classList.add(
-                                        "active"
-                                    );
-
-
-                                }
-
-
-
-                            }
-
-                        );
-
-
-
-                    }
-
-
-
-                }
-
-
-            );
-
-
-
-        },
-
-        observerOptions
-
-
-    );
-
-
-
-
-
-
-
-
-    sections.forEach(
-
-        function(section){
-
-
-            observer.observe(section);
-
-
-        }
-
-    );
-
-
-
-
-
-
-
+    root:null,
 
 
     /*
-    ===============================
-    Smooth Scroll
-
-    点击导航平滑移动
-    ===============================
+    当前章节进入页面中间区域时触发
     */
 
+    rootMargin:
+    "-20% 0px -65% 0px",
 
-    navLinks.forEach(
 
-        function(link){
+    threshold:0
 
 
+};
 
-            link.addEventListener(
 
-                "click",
 
-                function(event){
 
 
 
-                    const targetID =
-                    this.getAttribute(
-                        "href"
-                    );
 
+const observer =
 
+new IntersectionObserver(
 
+function(entries){
 
-                    if(
-                        !targetID.startsWith("#")
-                    ){
 
-                        return;
 
-                    }
+entries.forEach(
 
+function(entry){
 
 
 
+if(entry.isIntersecting){
 
-                    const target =
-                    document.querySelector(
-                        targetID
-                    );
 
 
+const currentID =
 
+entry.target.getAttribute(
+"id"
+);
 
 
 
-                    if(target){
 
 
+navLinks.forEach(
 
-                        event.preventDefault();
+function(link){
 
 
 
+link.classList.remove(
+"active"
+);
 
 
-                        const navbar =
-                        document.querySelector(
-                            ".navbar"
-                        );
 
 
 
-                        const navbarHeight =
-                        navbar.offsetHeight;
+if(
 
+link.getAttribute(
+"href"
+)
 
+===
 
+"#"+currentID
 
+){
 
 
 
-                        const targetPosition =
-                        target.offsetTop
-                        -
-                        navbarHeight
-                        -
-                        20;
+link.classList.add(
+"active"
+);
 
 
 
+}
 
 
 
-                        window.scrollTo({
+}
 
 
-                            top:
-                            targetPosition,
 
+);
 
-                            behavior:
-                            "smooth"
 
 
-                        });
+}
 
 
 
-                    }
+}
 
 
+);
 
-                }
 
 
-            );
+},
 
 
+observerOptions
 
-        }
 
+);
 
-    );
+
+
+
+
+
+
+
+
+sections.forEach(
+
+function(section){
+
+
+observer.observe(section);
+
+
+}
+
+);
+
+
+
+
+
+
+
+
+
+/*
+================================================
+
+Smooth Scroll
+
+导航点击平滑移动
+
+================================================
+*/
+
+
+navLinks.forEach(
+
+function(link){
+
+
+
+link.addEventListener(
+
+"click",
+
+function(event){
+
+
+
+
+
+const targetID =
+
+this.getAttribute(
+"href"
+);
+
+
+
+
+
+/*
+
+如果不是页面内部链接，
+例如CV，不处理
+
+*/
+
+
+if(
+!targetID.startsWith("#")
+){
+
+return;
+
+}
+
+
+
+
+
+
+const target =
+
+document.querySelector(
+targetID
+);
+
+
+
+
+
+if(target){
+
+
+
+event.preventDefault();
+
+
+
+
+
+
+const navbar =
+
+document.querySelector(
+".navbar"
+);
+
+
+
+
+
+const navbarHeight =
+
+navbar.offsetHeight;
+
+
+
+
+
+
+
+const targetPosition =
+
+target.offsetTop
+
+-
+
+navbarHeight
+
+-
+
+20;
+
+
+
+
+
+
+
+window.scrollTo({
+
+
+top:
+targetPosition,
+
+
+behavior:
+"smooth"
+
+
+
+});
+
+
+
+
+
+}
+
+
+
+
+
+}
+
+
+);
+
+
+
+});
+
+
+
 
 
 
