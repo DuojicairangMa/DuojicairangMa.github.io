@@ -1,15 +1,23 @@
 body{
 
+
 font-family:
 "Helvetica Neue",
 Arial,
 sans-serif;
 
+
 margin:0;
+
 
 color:#333;
 
+
 line-height:1.8;
+
+
+font-size:16px;
+
 
 }
 
@@ -17,17 +25,30 @@ line-height:1.8;
 
 .container{
 
-width:1000px;
+
+max-width:1100px;
+
 
 margin:auto;
+
+
+padding:0 30px;
+
 
 }
 
 
 
+
+
+/* Header */
+
+
 header{
 
-padding:70px 0;
+
+padding:60px 0;
+
 
 }
 
@@ -35,35 +56,74 @@ padding:70px 0;
 
 .profile{
 
+
 display:flex;
+
 
 align-items:center;
 
-gap:60px;
+
+gap:70px;
+
 
 }
+
+
+
+
+.left{
+
+
+flex:0 0 180px;
+
+
+}
+
+
+
+.right{
+
+
+text-align:left;
+
+
+}
+
 
 
 
 .avatar{
 
-width:200px;
 
-height:200px;
+width:160px;
+
+
+height:160px;
+
 
 border-radius:50%;
 
+
 object-fit:cover;
+
 
 }
 
 
 
+
+
 h1{
 
-font-size:45px;
 
-margin-bottom:10px;
+font-size:38px;
+
+
+margin:0 0 10px 0;
+
+
+font-weight:700;
+
 
 }
 
@@ -71,9 +131,15 @@ margin-bottom:10px;
 
 h2{
 
-font-size:32px;
+
+font-size:30px;
+
 
 margin-bottom:25px;
+
+
+color:#222;
+
 
 }
 
@@ -81,43 +147,86 @@ margin-bottom:25px;
 
 h3{
 
-font-size:22px;
+
+font-size:21px;
+
 
 }
+
+
 
 
 
 .interest{
 
+
 font-size:17px;
+
+
+line-height:2;
+
 
 }
 
+
+
+
+
+/* buttons */
 
 
 .links a{
 
+
 display:inline-block;
 
-margin-right:15px;
 
-padding:8px 15px;
+margin-right:12px;
 
-border:1px solid #333;
+
+margin-top:15px;
+
+
+padding:7px 16px;
+
+
+background:#333;
+
+
+color:white;
+
 
 border-radius:5px;
 
+
 text-decoration:none;
 
-color:#333;
+
+font-size:14px;
+
 
 }
+
+
+
+.links a:hover{
+
+
+background:#555;
+
+
+}
+
+
+
 
 
 
 section{
 
-padding:50px 0;
+
+padding:45px 0;
+
 
 }
 
@@ -125,55 +234,95 @@ padding:50px 0;
 
 .gray{
 
+
 background:#f6f6f6;
+
 
 }
 
+
+
+
+
+
+/* Research cards */
 
 
 .cards{
 
+
 display:flex;
+
 
 gap:25px;
 
+
 }
+
+
 
 
 
 .card{
 
+
 background:white;
+
 
 padding:25px;
 
+
 flex:1;
 
+
 box-shadow:
-0 5px 15px rgba(0,0,0,0.08);
+0 4px 15px rgba(0,0,0,0.08);
+
+
+border-radius:8px;
+
 
 }
 
+
+
+
+
+
+/* Publications */
 
 
 .paper{
 
+
 padding:20px 0;
 
-border-bottom:1px solid #ddd;
+
+border-bottom:
+1px solid #ddd;
+
 
 }
+
+
+
+
 
 
 
 footer{
 
+
 background:#222;
+
 
 color:white;
 
+
 text-align:center;
 
+
 padding:25px;
+
 
 }
