@@ -1311,40 +1311,236 @@ body {
    Projects
 ========================================================= */
 
-.project-item {
 
-    margin-bottom: 28px;
+.project-intro {
 
-    padding-left: 15px;
 
-    border-left: 3px solid #d8e7f5;
+    margin-bottom:35px;
+
+
+    color:#40556d;
+
+
+    font-size:17px;
+
+
+    line-height:1.8;
+
 
 }
 
 
-.project-item:last-child {
 
-    margin-bottom: 0;
+
+
+
+.project-card {
+
+
+    display:flex;
+
+
+    gap:28px;
+
+
+    padding:25px 0;
+
+
+    margin-bottom:15px;
+
+
+    border-bottom:1px solid #e8edf3;
+
 
 }
 
 
-.project-item h3 {
 
-    margin: 0 0 4px;
+.project-card:last-child {
 
-    color: #23456c;
 
-    font-size: 20px;
+    border-bottom:none;
 
-    font-weight: 700;
 
 }
 
 
-.project-item p {
 
-    margin: 0;
+
+
+.project-image {
+
+
+    width:260px;
+
+
+    height:170px;
+
+
+    object-fit:cover;
+
+
+    border-radius:10px;
+
+
+    box-shadow:
+    0 5px 18px rgba(0,0,0,0.12);
+
+
+    transition:
+    transform .3s ease,
+    box-shadow .3s ease;
+
+
+}
+
+
+
+
+.project-image:hover {
+
+
+    transform:scale(1.03);
+
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,0.18);
+
+
+}
+
+
+
+
+
+.project-content {
+
+
+    flex:1;
+
+
+}
+
+
+
+
+
+.project-content h3 {
+
+
+    margin-top:0;
+
+
+    margin-bottom:12px;
+
+
+    color:#23456c;
+
+
+    font-family:
+    "Times New Roman",
+    Times,
+    serif;
+
+
+    font-size:21px;
+
+
+}
+
+
+
+
+
+.project-content p {
+
+
+    margin:8px 0;
+
+
+    color:#34495e;
+
+
+    font-size:15.5px;
+
+
+    line-height:1.75;
+
+
+}
+
+
+
+
+
+.project-tags {
+
+
+    margin-top:15px;
+
+
+}
+
+
+
+.project-tags span {
+
+
+    display:inline-block;
+
+
+    margin-right:8px;
+
+
+    padding:4px 10px;
+
+
+    border-radius:12px;
+
+
+    background:#f1f6fb;
+
+
+    color:#46749b;
+
+
+    font-size:12px;
+
+
+    font-weight:600;
+
+
+}
+
+
+
+
+
+
+@media(max-width:900px){
+
+
+    .project-card {
+
+
+        flex-direction:column;
+
+
+    }
+
+
+
+    .project-image {
+
+
+        width:100%;
+
+
+        height:auto;
+
+
+    }
+
 
 }
 
