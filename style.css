@@ -830,70 +830,406 @@ body {
    Publications
 ========================================================= */
 
+
+.publication-list {
+
+    width:100%;
+
+}
+
+
+
+
 .publication {
 
-    display: grid;
 
-    grid-template-columns: 60px 1fr;
+    display:grid;
 
-    column-gap: 20px;
 
-    padding: 18px 0;
+    grid-template-columns:58px 1fr;
 
-    border-bottom: 1px solid #edf0f4;
+
+    column-gap:24px;
+
+
+    padding:22px 0;
+
+
+    border-bottom:1px solid #e8edf3;
+
 
 }
 
 
-.publication:first-of-type {
 
-    padding-top: 4px;
+.publication:first-child {
+
+
+    padding-top:5px;
+
 
 }
+
+
+
+.publication:last-child {
+
+
+    border-bottom:none;
+
+
+}
+
+
+
+
+
+/* -------------------------------
+   Year
+-------------------------------- */
 
 
 .publication-year {
 
-    padding-top: 2px;
 
-    color: #1673d1;
+    padding-top:3px;
+
+
+    color:#4f83b1;
+
 
     font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
 
-    font-size: 14px;
+    Arial,
 
-    font-weight: 700;
+    Helvetica,
+
+    sans-serif;
+
+
+    font-size:14px;
+
+
+    font-weight:700;
+
+
+    line-height:1.5;
+
 
 }
+
+
+
+
+
+
+
+/* -------------------------------
+   Content
+-------------------------------- */
+
+
+.publication-content {
+
+
+    min-width:0;
+
+
+}
+
+
+
+
+
+/* Paper title */
 
 
 .publication-title {
 
-    color: #193653;
 
-    font-size: 17px;
+    color:#193653;
 
-    font-weight: 600;
 
-    line-height: 1.55;
+    font-family:
+
+    "Times New Roman",
+
+    Times,
+
+    serif;
+
+
+    font-size:17px;
+
+
+    font-weight:600;
+
+
+    line-height:1.55;
+
+
+    transition:
+
+    color .25s ease;
+
 
 }
 
 
-.publication-venue {
 
-    margin-top: 5px;
 
-    color: #718096;
+.publication-title:hover {
 
-    font-size: 15px;
 
-    font-style: italic;
+    color:#1673d1;
 
-    line-height: 1.5;
+
+}
+
+
+
+
+
+
+
+
+/* Authors */
+
+
+.publication-authors {
+
+
+    margin-top:7px;
+
+
+    color:#53677e;
+
+
+    font-family:
+
+    "Times New Roman",
+
+    Times,
+
+    serif;
+
+
+    font-size:15px;
+
+
+    line-height:1.6;
+
+
+}
+
+
+
+
+
+/* Highlight yourself */
+
+
+.author-me {
+
+
+    color:#244c70;
+
+
+    font-weight:700;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* Journal information */
+
+
+.publication-meta {
+
+
+    margin-top:5px;
+
+
+    color:#718096;
+
+
+    font-family:
+
+    "Times New Roman",
+
+    Times,
+
+    serif;
+
+
+    font-size:15px;
+
+
+    line-height:1.55;
+
+
+}
+
+
+
+
+
+.publication-meta em {
+
+
+    color:#596d82;
+
+
+    font-style:italic;
+
+
+}
+
+
+
+
+
+
+
+
+/* DOI */
+
+
+.publication-doi {
+
+
+    margin-top:8px;
+
+
+    color:#7a8798;
+
+
+    font-family:
+
+    Arial,
+
+    Helvetica,
+
+    sans-serif;
+
+
+    font-size:13px;
+
+
+}
+
+
+
+
+.publication-doi a {
+
+
+    color:#3975a7;
+
+
+    text-decoration:none;
+
+
+    transition:
+
+    color .2s ease;
+
+
+}
+
+
+
+
+.publication-doi a:hover {
+
+
+    color:#1673d1;
+
+
+    text-decoration:underline;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   Publications Mobile
+========================================================= */
+
+
+@media(max-width:760px){
+
+
+
+    .publication {
+
+
+        grid-template-columns:1fr;
+
+
+        row-gap:5px;
+
+
+        padding:20px 0;
+
+
+    }
+
+
+
+    .publication-year {
+
+
+        margin-bottom:4px;
+
+
+    }
+
+
+
+    .publication-title {
+
+
+        font-size:16px;
+
+
+    }
+
+
+
+    .publication-authors {
+
+
+        font-size:14px;
+
+
+    }
+
+
+
+    .publication-meta {
+
+
+        font-size:14px;
+
+
+    }
+
+
 
 }
 
