@@ -1603,32 +1603,134 @@ footer {
     }
 
 
-    /* Research */
-
-    .research-item {
-
-        grid-template-columns: 36px 1fr;
-
-        column-gap: 12px;
-
-    }
+    /* =========================================================
+   Research
+========================================================= */
 
 
-    /* Publications */
+.research-intro {
 
-    .publication {
+    margin-bottom:35px;
 
-        grid-template-columns: 1fr;
+    color:#40556d;
 
-        row-gap: 3px;
+    font-size:17px;
 
-    }
+    line-height:1.8;
+
+}
 
 
-    .publication-year {
 
-        margin-bottom: 2px;
 
-    }
+
+.research-item {
+
+
+    display:grid;
+
+
+    grid-template-columns:
+
+    45px
+
+    1fr;
+
+
+    column-gap:20px;
+
+
+    margin-bottom:38px;
+
+
+}
+
+
+
+.research-item:last-child {
+
+
+    margin-bottom:0;
+
+
+}
+
+
+
+
+.research-number {
+
+
+    padding-top:3px;
+
+
+    color:#72a7d5;
+
+
+    font-family:
+
+    Georgia,
+
+    "Times New Roman",
+
+    serif;
+
+
+    font-size:20px;
+
+
+    font-weight:700;
+
+
+}
+
+
+
+
+
+.research-content h3 {
+
+
+    margin:0 0 10px;
+
+
+    color:#23456c;
+
+
+    font-family:
+
+    "Times New Roman",
+
+    Times,
+
+    serif;
+
+
+    font-size:21px;
+
+
+    font-weight:700;
+
+
+}
+
+
+
+
+
+.research-content p {
+
+
+    margin:0;
+
+
+    color:#34495e;
+
+
+    font-size:16px;
+
+
+    line-height:1.75;
+
 
 }
