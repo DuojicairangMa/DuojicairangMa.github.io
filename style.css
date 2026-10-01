@@ -311,7 +311,7 @@ body {
 
     grid-template-columns:
 
-    280px
+    240px
 
     1fr;
 
@@ -360,22 +360,37 @@ body {
 
 .profile-photo {
 
+    width:180px;
 
-    width:230px;
-
-
-    height:230px;
-
+    height:180px;
 
     object-fit:cover;
 
-
     border-radius:12px;
+
+    box-shadow:
+    0 6px 18px rgba(20,40,70,0.12);
+
+    transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+
+    cursor:pointer;
+
+}
+
+
+.profile-photo:hover {
+
+
+    transform:
+    scale(1.05)
+    translateY(-5px)
+    rotate(1deg);
 
 
     box-shadow:
-
-    0 8px 22px rgba(20,40,70,0.15);
+    0 15px 35px rgba(20,40,70,0.25);
 
 
 }
@@ -406,7 +421,7 @@ body {
 
 
 
-    font-size:29px;
+    font-size:25px;
 
 
     line-height:1.2;
@@ -441,7 +456,7 @@ body {
     serif;
 
 
-    font-size:20px;
+    font-size:17px;
 
 
     color:#66778b;
@@ -461,7 +476,7 @@ body {
 .profile-role {
 
 
-    margin-top:20px;
+    margin-top:15px;
 
 
     color:#1673d1;
@@ -538,8 +553,9 @@ body {
     margin-top:20px;
 
 
-    padding:12px 14px;
+    padding:8px 10px;
 
+    font-size:14px;
 
     background:#f3f8fd;
 
@@ -562,7 +578,7 @@ body {
     font-weight:600;
 
 
-    line-height:1.6;
+    line-height:1.5;
 
 
 }
@@ -575,7 +591,7 @@ body {
 .personal-quote {
 
 
-    margin-top:18px;
+    margin-top:14px;
 
 
     padding-left:13px;
@@ -599,7 +615,7 @@ body {
 
 
 
-    font-size:14px;
+    font-size:13px;
 
 
     font-style:italic;
