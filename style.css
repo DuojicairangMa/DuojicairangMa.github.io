@@ -1,8 +1,8 @@
 body{
 
 font-family:
+"Helvetica Neue",
 Arial,
-"Microsoft YaHei",
 sans-serif;
 
 margin:0;
@@ -12,6 +12,7 @@ color:#333;
 line-height:1.8;
 
 }
+
 
 
 .container{
@@ -26,9 +27,19 @@ margin:auto;
 
 header{
 
-padding:60px 0;
+padding:70px 0;
 
-text-align:center;
+}
+
+
+
+.profile{
+
+display:flex;
+
+align-items:center;
+
+gap:60px;
 
 }
 
@@ -36,9 +47,9 @@ text-align:center;
 
 .avatar{
 
-width:180px;
+width:200px;
 
-height:180px;
+height:200px;
 
 border-radius:50%;
 
@@ -50,7 +61,9 @@ object-fit:cover;
 
 h1{
 
-font-size:42px;
+font-size:45px;
+
+margin-bottom:10px;
 
 }
 
@@ -58,7 +71,45 @@ font-size:42px;
 
 h2{
 
-font-size:30px;
+font-size:32px;
+
+margin-bottom:25px;
+
+}
+
+
+
+h3{
+
+font-size:22px;
+
+}
+
+
+
+.interest{
+
+font-size:17px;
+
+}
+
+
+
+.links a{
+
+display:inline-block;
+
+margin-right:15px;
+
+padding:8px 15px;
+
+border:1px solid #333;
+
+border-radius:5px;
+
+text-decoration:none;
+
+color:#333;
 
 }
 
@@ -66,7 +117,7 @@ font-size:30px;
 
 section{
 
-padding:40px 0;
+padding:50px 0;
 
 }
 
@@ -74,7 +125,42 @@ padding:40px 0;
 
 .gray{
 
-background:#f5f5f5;
+background:#f6f6f6;
+
+}
+
+
+
+.cards{
+
+display:flex;
+
+gap:25px;
+
+}
+
+
+
+.card{
+
+background:white;
+
+padding:25px;
+
+flex:1;
+
+box-shadow:
+0 5px 15px rgba(0,0,0,0.08);
+
+}
+
+
+
+.paper{
+
+padding:20px 0;
+
+border-bottom:1px solid #ddd;
 
 }
 
@@ -88,6 +174,6 @@ color:white;
 
 text-align:center;
 
-padding:20px;
+padding:25px;
 
 }
