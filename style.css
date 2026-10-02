@@ -1336,21 +1336,17 @@ body {
 
 .project-card {
 
-
     display:flex;
 
+    align-items:flex-start;
 
-    gap:28px;
-
+    gap:35px;
 
     padding:25px 0;
 
-
     margin-bottom:15px;
 
-
     border-bottom:1px solid #e8edf3;
-
 
 }
 
@@ -1369,17 +1365,17 @@ body {
 
 .project-image {
 
-    width: 100%;
+    width:520px;
 
-    height: 260px;
+    height:300px;
 
-    object-fit: cover;
+    object-fit:cover;
 
-    border-radius: 8px;
+    border-radius:8px;
 
-    display: block;
+    display:block;
 
-    margin-bottom: 20px;
+    flex-shrink:0;
 
 }
 
@@ -1406,7 +1402,7 @@ body {
 
 
     flex:1;
-
+min-width:0;
 
 }
 
